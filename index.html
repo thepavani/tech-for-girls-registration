@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tech for Girls Registration</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #4a148c;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 16px;
+      background-color: #4a148c;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #6a1b9a;
+    }
+
+    #clickCounter,
+    #shareMessage,
+    #message {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tech for Girls Registration Form</h1>
+
+    <form id="registrationForm">
+      <label for="name">Name:</label>
+      <input type="text" name="name" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="number" name="phone" required />
+
+      <label for="email">Email ID:</label>
+      <input type="email" name="email" required />
+
+      <label for="college">College/Department:</label>
+      <input type="text" name="college" required />
+
+      <div class="share-section">
+        <button type="button" id="shareBtn">📤 Share on WhatsApp</button>
+        <p id="clickCounter">Click count: 0/5</p>
+        <p id="shareMessage"></p>
+      </div>
+
+      <label for="screenshot">Upload Screenshot:</label>
+      <input type="file" name="screenshot" required />
+
+      <button type="submit" id="submitBtn">Submit Registration</button>
+    </form>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
